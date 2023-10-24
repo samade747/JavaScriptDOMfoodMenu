@@ -45,3 +45,13 @@ const foodMenu = [
 // array mai category ke buttons
 const buttons = ['All', 'Breakfast', 'Lunch', 'shakes'];
 
+// container la rha hoin for catogery buttons
+const buttonContainer = document.getElementById('Menu-items-category');
+
+// create buttons for each category 
+buttons.forEach(function(button){
+// creaing html code for buttons 
+`<button onclick="showItems('${button.toLowerCase()}')">${button}</button>`;
+
+});
+
