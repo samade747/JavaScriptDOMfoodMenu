@@ -51,7 +51,7 @@ const buttonContainer = document.getElementById('Menu-items-category');
 // create buttons for each category by forEach loop
 buttons.forEach(function(button){
 // creaing html code for buttons 
-`<button onclick="showItems('${button.toLowerCase()}')">${button}</button>`;
+buttonContainer.innerHTML += `<button onclick="showItems('${button.toLowerCase()}')">${button}</button>`;
 
 });
 
@@ -80,7 +80,22 @@ if (filteredItems == ''){
 
 // Displaying the item
 filteredItems.forEach(function (item){
-    MenuContainer.innerHTML +=
+    MenuContainer.innerHTML += `
+    <div class="d-flex gap-3 align-items-center col-lg-6 my-4">
+      <img src=${item.itemImage} alt="" class="food-icon">
+      <div>
+        <span class="d-flex align-items-center justify-content-between mb-3">
+          <h5 class="m-0">${item.itemName}</h5>
+          <p class="m-0 price">${item.itemPrice}</p>
+        </span>
+        <p class="m-0 text-justify">${item.itemDesc}</p>
+      </div>
+    </div>
+  `;
+});
+
+
+showItems();
     
 })
 
