@@ -82,7 +82,7 @@ if (filteredItems == ''){
 filteredItems.forEach(function (item){
     MenuContainer.innerHTML += `
     <div class="d-flex gap-3 align-items-center col-lg-6 my-4">
-      <img src=${item.itemImage} alt="" class="food-icon">
+      <img src=${item.itemimage} alt="" class="food-icon">
       <div>
         <span class="d-flex align-items-center justify-content-between mb-3">
           <h5 class="m-0">${item.itemName}</h5>
@@ -97,7 +97,7 @@ filteredItems.forEach(function (item){
 
 showItems();
     
-})
+
 
 
 
