@@ -61,7 +61,7 @@ function showItems(category) {
     // getting the container for menu items 
     const MenuContainer = document.getElementById('menu-items-display');
     
-}
+
 
 // clearing the existing content
 MenuContainer.innerHTML = "";
@@ -74,30 +74,27 @@ var filteredItems = foodMenu.filter(function(item){
     }
 });
 // when no items display
-if (filteredItems == ''){
+if (filteredItems.length === 0){
     filteredItems = foodMenu;
 }
 
 // Displaying the item
 filteredItems.forEach(function (item){
-    MenuContainer.innerHTML += `
-    <div class="d-flex gap-3 align-items-center col-lg-6 my-4">
-      <img src=${item.itemimage} alt="" class="food-icon">
-      <div>
-        <span class="d-flex align-items-center justify-content-between mb-3">
-          <h5 class="m-0">${item.itemName}</h5>
-          <p class="m-0 price">${item.itemPrice}</p>
-        </span>
-        <p class="m-0 text-justify">${item.itemDesc}</p>
-      </div>
+  MenuContainer.innerHTML += `
+  <div class="align-items-center col-lg-6 my-5 d-flex justify-content-center gap-2 mt-2">
+    <img src=${item.itemimage} alt="" class="food-icon" style="width: 400px; height: 300px;">
+    <div>
+      <span class="d-flex align-items-center justify-content-between mb-3">
+        <h5 class="m-0">${item.itemName}</h5> 
+        <p class="m-0 price">${item.itemPrice}</p>
+      </span>
+      <p class="m-0 text-justify">${item.itemDesc}</p>
     </div>
-  `;
+  </div>
+`;
 });
+}
 
-
+// Initial invocation of showItems to display all items
 showItems();
-    
-
-
-
 
