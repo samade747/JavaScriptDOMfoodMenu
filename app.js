@@ -90,12 +90,12 @@ function showItems(category) {
         div.style.alignItems = "center";
 
         div.innerHTML = `
-            <div class="card" style="width: 30rem; border:1px solid lightgrey; border-radius:15px; box-shadow: 0px 0px 58px -24px rgba(0,0,0,0.65) inset; -webkit-box-shadow: 0px 0px 58px -24px rgba(0,0,0,0.65) inset; -moz-box-shadow: 0px 0px 58px -24px rgba(0,0,0,0.65) inset;">
+            <div class="card" style="width: 40rem; border:5px solid lightgrey; border-radius:30px; box-shadow: 0px 0px 58px -24px rgba(0,0,0,0.65) inset; -webkit-box-shadow: 0px 0px 58px -24px rgba(0,0,0,0.65) inset; -moz-box-shadow: 0px 0px 58px -24px rgba(0,0,0,0.25) inset;">
                 <img class="card1img" style="border-radius:15px;" src="${item.itemimage}" class="card-img-top">
                 <div class="card-body">
-                    <h5 class="card-titleard1Name" style="color:rgb(252, 163, 9); text-transform:capitalize;">${item.itemName}</h5>
-                    <h6 class="card-title card1Price" style="font-size:large;">RS : <span style="color:rgb(252, 163, 9);">${item.itemPrice}</span></h6>
-                    <p class="card-text" style="color:black; font-size:medium;">${item.itemDescripition}</p>
+                    <h5 class="card-titleard1Name" style="color:rgb(202, 163, 90); text-transform:capitalize;">${item.itemName}</h5>
+                    <h6 class="card-title card1Price" style="font-size:large;">RS : <span style="color:rgb(252, 103, );">${item.itemPrice}</span></h6>
+                    <p class="card-text" style="color:red; font-size:medium;">${item.itemDescripition}</p>
                 </div>
             </div>
         `;
