@@ -13,7 +13,7 @@ const foodMenu = [
 
 
     {
-        itemimage: './images/',
+        itemimage: './images/karai.jpg',
         itemName : 'omlait Paratah',
         itemPrice: '180 PKR',
         itemDescripition: 'lorem lreeandadjjdsajkjsaddas',
