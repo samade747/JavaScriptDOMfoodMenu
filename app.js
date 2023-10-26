@@ -90,7 +90,7 @@ function showItems(category) {
         div.style.alignItems = "center";
 
         div.innerHTML = `
-            <div class="card" style="width: 40rem; border:5px solid lightgrey; border-radius:30px; box-shadow: 0px 0px 58px -24px rgba(0,0,0,0.65) inset; -webkit-box-shadow: 0px 0px 58px -24px rgba(0,0,0,0.65) inset; -moz-box-shadow: 100px 0px 58px -24px rgba(0,0,0,0.25) inset;">
+            <div class="card" style="width: 40rem; border:5px solid black; border-radius:30px; box-shadow: 0px 0px 58px -24px rgba(0,0,0,0.65) inset; -webkit-box-shadow: 0px 0px 58px -24px rgba(0,0,0,0.65) inset; -moz-box-shadow: 100px 0px 58px -24px rgba(0,0,0,0.25) inset;">
                 <img class="card1img" style="border-radius:15px;" src="${item.itemimage}" class="card-img-top">
                 <div class="card-body">
                     <h5 class="card-titleard1Name" style="color:rgb(202, 163, 90); text-transform:capitalize;">${item.itemName}</h5>
