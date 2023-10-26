@@ -110,6 +110,11 @@ function showItems(category) {
 
 showItems();
 
+function toggleAddItemForm() {
+    const form = document.getElementById('addItemForm');
+    form.style.display = (form.style.display === 'none') ? 'block' : 'none';
+}
+
 
 function addItem(event) {
     event.preventDefault(); // Prevent the form from submitting
