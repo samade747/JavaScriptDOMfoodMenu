@@ -134,7 +134,8 @@ function addItem(event) {
     };
 
     foodMenu.push(newItem);
-    showItems('All'); 
+    showItems('All');
+    toggleAddItemForm();
 }
 
 
