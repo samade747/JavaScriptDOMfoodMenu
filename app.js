@@ -69,7 +69,7 @@ function showItems(category) {
         if (item.itemCategory == category || category == 'All') {
             return true;
         }
-    });
+    })
 
     if (filteredItems.length === 0) {
         filteredItems = foodMenu;
