@@ -80,9 +80,7 @@ if (filteredItems.length === 0){
 
 // Displaying the item
 filteredItems.forEach(function (item){
-  MenuContainer.innerHTML += `
-  
-        
+  MenuContainer.innerHTML += `  
   <div class="align-items-center d-flex justify-content-center gap-2 mt-5">
     <img src=${item.itemimage} alt="" style="width: 400px; height: 400px;">
     <div>
@@ -93,7 +91,7 @@ filteredItems.forEach(function (item){
       <p class="m-0 text-justify">${item.itemDesc}</p>
     </div>
   </div>
-  </div>
+ 
       
 `;
 });
