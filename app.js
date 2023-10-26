@@ -79,21 +79,88 @@ if (filteredItems.length === 0){
 }
 
 // Displaying the item
-filteredItems.forEach(function (item){
-  MenuContainer.innerHTML += `  
-  <div class="align-items-center d-flex justify-content-center gap-2 mt-5">
-    <img src=${item.itemimage} alt="" style="width: 400px; height: 400px;">
-    <div>
-      <span class="d-flex align-items-center justify-content-between mb-3">
-        <h5 class="m-0">${item.itemName}</h5> 
-        <p class="m-0 price">${item.itemPrice}</p>
-      </span>
-      <p class="m-0 text-justify">${item.itemDesc}</p>
-    </div>
-  </div>
+// filteredItems.forEach(function (item){
+//   MenuContainer.innerHTML += `  
+  
+//       <div class="d-flex  align-items-center justify-content-center gap-2 mt-5">
+//       <img src=${item.itemimage} alt="" style="width: 400px; height: 400px;">
+//       <div class="d-flex align-items-center justify-content-between mb-3 card">
+         
+//           <h5 class="m-0">${item.itemName}</h5> 
+//           <p class="m-0 price">${item.itemPrice}</p>
+        
+//         <p class="m-0 text-justify">${item.itemDesc}</p>
+//       </div>
+//     </div>
+//       </div>                   
+//   </div>        
+//   </div>
+
+
+let cardContainer = document.querySelector('menu-items-display')
+
+let row = document.createElement('div')
+row.classList.add('row')
+
+filteredItems.forEach( function (item) {
+  
+  
+  for (i = 0 ; i < 2 ; i++ ) {
+      col =  document.createElement('div')
+          col.classList.add('col-md-4')
+          col.classList.add('col-sm-6')
+          col.classList.add('mb-3')
+  }
+  MenuContainer.innerHTML += 
+  div = document.createElement('div')
+  div.style.display = "flex"
+  div.style.justifyContent = "center"
+  div.style.alignItems = "center"
  
-      
-`;
+  
+  `<div 
+  class="card" 
+  style="width: 18rem; 
+  border:1px solid lightgrey;  
+  border-radius:15px; box-shadow: box-shadow: 0px 0px 58px -24px rgba(0,0,0,0.65) inset;
+  -webkit-box-shadow: 0px 0px 58px -24px rgba(0,0,0,0.65) inset;
+  -moz-box-shadow: 0px 0px 58px -24px rgba(0,0,0,0.65) inset;">
+
+  <img 
+  class="card1img" 
+  style="border-radius:15px;" 
+  src="${images[imageIndex]}" 
+  class="card-img-top">
+
+  <div 
+  class="card-body">
+
+  <h5 
+  class="card-titleard1Name" 
+  style="color:rgb(252, 163, 9); 
+  text-transform:capitalize;">
+  ${menuCard.name}</h5>
+
+  <h6 class="card-title 
+  card1Price" 
+  style="font-size:large;">
+  RS : 
+  <span 
+  style="color:rgb(252, 163, 9);">
+  ${menuCard.RS}</span></h6>
+
+  <p 
+  class="card-text" 
+  style="color:black; 
+  font-size:medium;"> 
+  ${menuCard.text}</p>
+
+  </div>`
+
+  col.appendChild(div)
+  row.appendChild(col)
+  cardContainer.appendChild(row)
+})
 });
 }
 
