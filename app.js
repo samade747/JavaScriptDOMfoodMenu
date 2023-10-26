@@ -23,7 +23,7 @@ const foodMenu = [
 
 
        {
-        itemimage: './images/karai.jpg',
+        itemimage: './images/salad.jpg',
         itemName : 'salad',
         itemPrice: '150 PKR',
         itemDescripition: 'lorem lreeandadjjdsajkjsaddas',
@@ -32,7 +32,7 @@ const foodMenu = [
        },
 
        {
-        itemimage: './images/karai.jpg',
+        itemimage: './images/shake1.jpg',
         itemName : 'Chocolate Shake',
         itemPrice: '180 PKR',
         itemDescripition: 'lorem lreeandadjjdsajkjsaddas',
@@ -81,8 +81,10 @@ if (filteredItems.length === 0){
 // Displaying the item
 filteredItems.forEach(function (item){
   MenuContainer.innerHTML += `
-  <div class="align-items-center col-lg-6 my-5 d-flex justify-content-center gap-2 mt-2">
-    <img src=${item.itemimage} alt="" class="food-icon" style="width: 400px; height: 300px;">
+  
+        
+  <div class="align-items-center d-flex justify-content-center gap-2 mt-5">
+    <img src=${item.itemimage} alt="" style="width: 400px; height: 400px;">
     <div>
       <span class="d-flex align-items-center justify-content-between mb-3">
         <h5 class="m-0">${item.itemName}</h5> 
@@ -91,6 +93,8 @@ filteredItems.forEach(function (item){
       <p class="m-0 text-justify">${item.itemDesc}</p>
     </div>
   </div>
+  </div>
+      
 `;
 });
 }
